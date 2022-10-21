@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Programa para calcular FAR,POD,BIAS,ETS
+#a partir de archivos de precipitación en formato de texto
+for arquivo in `ls *A.txt`
+do
+echo $arquivo
+#grep "JAN\|FEB\|DEC" $arquivo>apaga1.txt
+#grep "MAR\|APR\|MAY" $arquivo>apaga1.txt
+#grep "JUN\|JUL\|AUG" $arquivo>apaga1.txt
+grep "SEP\|OCT\|NOV" $arquivo>apaga1.txt
+for i in `seq 6 9`
+do
+awk -v fn=$i '{print $5,$fn}' apaga1.txt>apaga2.txt
+awk '{if($1>0 && $2>0) yy++} {if($1>0 && $2==0) mis++} {if($1==0 && $2>0) fa++} {if($1==0 && $2==0) nn++} {hr=(yy+mis)*(yy+fa)/(yy+mis+fa+nn)} END {print (yy+nn)/(yy+mis+fa+nn), (yy+fa)/(yy+mis), yy/(yy+mis), fa/(fa+yy), (yy-hr)/(yy+mis+fa-hr) }' apaga2.txt >> metricsson.txt
+done
+done
+
+echo "accuracy  Freq Bias   POD   FAR   ETS" > headmetrics.txt
