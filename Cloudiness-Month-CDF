@@ -7,7 +7,57 @@ set yrange [0:60]
 set xrange[-1:9]
 set xtics ("0" 0, "1" 1, "2" 2, "3" 3, "4" 4, "5" 5, "6" 6, "7" 7, "8" 8)
 set terminal postscript eps enhanced color font 'Helvetica,20'
-set output 'MensualClimat-Jul.ps
+set output 'MensualClimat-Jul-1921-1930.ps
 set title "Cloudiness Monthly average July 1921-1930 San Calixto"
 p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1920 && $2<1931) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
 set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1931-1940.ps
+set title "Cloudiness Monthly average July 1931-1940 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1930 && $2<1941) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1941-1950.ps
+set title "Cloudiness Monthly average July 1941-1950 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1940 && $2<1951) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1951-1960.ps
+set title "Cloudiness Monthly average July 1951-1960 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1950 && $2<1961) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1961-1970.ps
+set title "Cloudiness Monthly average July 1961-1970 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1960 && $2<1971) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1971-1980.ps
+set title "Cloudiness Monthly average July 1971-1980 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1970 && $2<1981) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1981-1990.ps
+set title "Cloudiness Monthly average July 1981-1990 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1980 && $2<1991) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-1991-2000.ps
+set title "Cloudiness Monthly average July 1991-2000 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>1990 && $2<2001) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+set terminal postscript eps enhanced color font 'Helvetica,20'
+set output 'MensualClimat-Jul-2001-2010.ps
+set title "Cloudiness Monthly average July 2001-2010 San Calixto"
+p "<awk -v fv=7 '{if( $3==fv && $6>0 && $2>2000 && $2<2010) print $6}' SanCalixtoNubosidad-14h-2.csv" using 1:(1) smooth frequency with boxes lc rgb "dark-red"
+set terminal x11
+
+
