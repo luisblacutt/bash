@@ -6,4 +6,4 @@ set format x "%m-%d-%H:%M"
 set timefmt "%m-%d-%H:%M"
 set title "NO2 2006"
 set xtics rotate by -90
-p 'apaga.txt' using 1:2 title "NO2"
+p 'NO2-horario.txt' using 1:2 title "NO2"
