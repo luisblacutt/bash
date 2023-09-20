@@ -1,5 +1,5 @@
 awk '{print $1,$2,$3,$4}' 3_2_Datos_Automatico_Condiciones_Normales_NO2.txt>borra.txt
-sed 's/ /-/g' borra.txt |grep ":00"|sed 's/00-/00 /g'>apaga.txt
+sed 's/ /-/g' borra.txt |grep ":00"|sed 's/00-/00 /g'>NO2-horario.txt
 
 set xdata time
 set format x "%m-%d-%H:%M"
